@@ -1,6 +1,7 @@
-[submodule "forex_analysis"]
-	path = forex_analysis
-	url = https://github.com/rhdzmota/forex_analysis.git
+
 [submodule "metallic_blue_lizard"]
 	path = metallic_blue_lizard
 	url = https://github.com/rhdzmota/metallic_blue_lizard.git
+[submodule "financial_series"]
+	path = financial_series
+	url = https://github.com/rhdzmota/financial_series.git
