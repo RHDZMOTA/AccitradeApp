@@ -1,0 +1,8 @@
+# ignore jupyter checkpoints
+.ipynb_checkpoints/
+
+# ignore cache
+*.pyc
+
+# byte-compyled 
+__pycache__/
