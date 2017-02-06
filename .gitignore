@@ -6,3 +6,6 @@
 
 # byte-compyled 
 __pycache__/
+
+# submodules
+financial_series/
