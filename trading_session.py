@@ -103,7 +103,14 @@ class TradingSession(object):
     desc = 'Trading Session for Accitrade.'
     url = 'https://www.accitrade.com/AcciTradeCoach/home.action'
     
-    def __init__(self, user,pw,driv_r='drivers/linux/chromedriver',alias=''):
+    def __init__(self, user,pw,driv_r='',alias=''):
+        
+        # get operative system: Linux, Windows, Darwin 
+        import platform
+        operative_system = platform.system().lower()
+        if len(driv_r)==0:
+            driv_r = 'drivers/{}/chromedriver'.format(operative_system)
+        
         self.browser = webdriver.Chrome(driv_r)
         self.browser.get(self.url)
         self.browser.find_element_by_id('username_login').send_keys(user)
