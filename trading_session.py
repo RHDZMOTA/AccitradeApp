@@ -155,8 +155,10 @@ class TradingSession(object):
             self.browser.find_element_by_xpath('//input[@id="limitado"]').click()
             self.browser.find_element_by_xpath('//input[@id="capPrecio"]').send_keys(str(price))
             
-        # Validate
-        #self.browser.find_element_by_xpath('//a[@id="validar"]').submit()
+        # Validate and submit 
+        self.browser.find_element_by_xpath('//a[@id="validar"]').click()
+        time.sleep(3)
+        self.browser.find_element_by_xpath('//a[@id="enviar"]').click()
         
         
     def getExchangeRates(self):
